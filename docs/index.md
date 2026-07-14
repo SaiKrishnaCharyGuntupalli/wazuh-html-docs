@@ -11,7 +11,6 @@ This documentation is structured to help you move from planning and prerequisite
 - Multi-tenant index template and Filebeat routing design
 - Linux agent deployment and tenant labeling
 - Agent configuration for FIM, syscollector, and tenant-aware log collection
-- OpenSearch security setup for tenants, roles, and mappings
 - Document Level Security (DLS) rules for per-tenant index access
 - RBAC definitions across OpenSearch and Wazuh APIs
 - Microsoft Entra ID (Azure) SSO integration and role assignment
@@ -39,10 +38,9 @@ This documentation is structured to help you move from planning and prerequisite
 - [Index Template & Filebeat](02-index-template-filebeat/index_template.md)
 - [Agent Deployment](03-agent-deployment/agent_deplyment.md)
 - [Agent Configuration](04-agent-configuration/agent_config.md)
-- [OpenSearch Security](05-Approach1/Approach1.md)
-- [RBAC Definitions](06-rbac/rbac.md)
-- [Document Level Security](07-dls/dls.md)
+- [RBAC](06-rbac/rbac.md)
+- [Document Level Security (DLS)](07-dls/dls.md)
 - [SSO - Microsoft Entra ID](08-sso-entra/sso.md)
-- [Verification & Testing](09-Cluster and Index Verification/Cluster and Index Verification.md)
+- [Cluster and Index verification](09-Cluster and Index Verification/Cluster and Index Verification.md)
 - [Reference](10-reference/reference.md)
 
