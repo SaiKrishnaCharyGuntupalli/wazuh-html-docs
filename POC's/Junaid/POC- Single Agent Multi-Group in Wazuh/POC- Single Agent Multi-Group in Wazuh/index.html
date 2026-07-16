@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../../POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA/POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA/">
+      
+      
+        <link rel="next" href="../../POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>POC: Single Agent Multi-Group in Wazuh - Wazuh MSSP Multi-Tenant Implementation Guide</title>
+        <title>Single Agent Multi Group in Wazuh - Wazuh MSSP Multi-Tenant Implementation Guide</title>
       
     
     
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              POC: Single Agent Multi-Group in Wazuh
+              Single Agent Multi Group in Wazuh
             
           </span>
         </div>
@@ -549,10 +553,20 @@
       
   
   
+    
   
   
+  
     
     
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -562,11 +576,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -587,7 +601,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -641,6 +655,462 @@
     
   
     Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Vineeth/Secure%20Ingestion%20Pipeline%20Deployment/Secure%20Ingestion%20Pipeline%20Deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure Ingestion Pipeline Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA/POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Downtime Group Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Single Agent Multi Group in Wazuh
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Single Agent Multi Group in Wazuh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-expected-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Expected Outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-a-wazuh-dashboard-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part A: Wazuh Dashboard Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-the-baseline-linux-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create the baseline-linux group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-the-tenanta-compliance-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Create the tenantA-compliance group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-assign-the-kibana-agent-to-both-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Assign the Kibana agent to both groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-multi-group-membership-in-the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Verify multi-group membership in the Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-b-wazuh-manager-server-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part B: Wazuh Manager Server Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-access-the-wazuh-manager-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Access the Wazuh Manager container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-verify-that-agent-001-belongs-to-both-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Verify that agent 001 belongs to both groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-create-the-baseline-linux-group-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Create the baseline Linux group configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-create-the-tenant-a-compliance-group-configuration-the-below-is-basic-configyou-can-add-additional-paths-for-additional-log-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 8: Create the Tenant A compliance group configuration - The below is basic config,you can add additional paths for additional log collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-restart-the-wazuh-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 9: Restart the Wazuh Manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-c-kibana-agent-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part C: Kibana Agent Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-create-the-two-test-log-files-on-the-kibana-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 10: Create the two test log files on the Kibana agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-11-verify-that-both-group-configurations-reached-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 11: Verify that both group configurations reached the agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-d-detection-rule-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part D: Detection Rule Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-12-return-to-the-wazuh-manager-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 12: Return to the Wazuh Manager container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-13-validate-and-activate-the-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 13: Validate and activate the rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-e-generate-test-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part E: Generate Test Events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-14-generate-the-linux-baseline-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 14: Generate the Linux baseline event
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-15-generate-the-tenant-a-compliance-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 15: Generate the Tenant A compliance event
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-f-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part F: Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-16-validate-alerts-on-the-wazuh-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 16: Validate alerts on the Wazuh Manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-17-validate-alerts-in-the-wazuh-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 17: Validate alerts in the Wazuh Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poc-success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POC Success Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Use Case
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating System Based Group Creation in Wazuh GitHub
   
 
     
