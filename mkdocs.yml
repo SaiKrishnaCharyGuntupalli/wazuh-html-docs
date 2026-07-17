@@ -50,7 +50,8 @@ nav:
   - Reference:
       - Cluster and Index Verification: 09-Cluster and Index Verification/Cluster and Index Verification.md
       - Reference: 10-reference/reference.md
-      - Secure Ingestion Pipeline Deployment: POC's/Vineeth/Secure Ingestion Pipeline Deployment/Secure Ingestion Pipeline Deployment.md
+      - Wazuh Multi Node Runbook: POC's/Vineeth/Wazuh Multi Node Runbook/Wazuh Multi Node Runbook.md
+      - High Availability Log Ingestion Pipeline Deployment Guide: POC's/Vineeth/High Availability Log Ingestion Pipeline Deployment Guide/High Availability Log Ingestion Pipeline Deployment Guide.md
       - Zero Downtime Group Configuration: POC's/Junaid/POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA/POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA.md
       - Single Agent Multi Group in Wazuh: POC's/Junaid/POC- Single Agent Multi-Group in Wazuh/POC- Single Agent Multi-Group in Wazuh.md
       - Operating System Based Group Creation in Wazuh GitHub: POC's/Junaid/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub.md

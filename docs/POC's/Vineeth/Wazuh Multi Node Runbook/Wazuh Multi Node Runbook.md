@@ -1,16 +1,29 @@
-# Log Ingestion Pipeline Deployment Guide
+# WAZUH MULTI-NODE RUNBOOK
 
 ## Overview
-This document provides a step-by-step deployment guide for implementing a secure, highly available log ingestion pipeline integrated with Wazuh. The architecture uses Filebeat, Logstash, HAProxy, rsyslog, and Wazuh Manager nodes to securely collect, process, load balance, and forward log events.
+This runbook provides a step-by-step deployment and configuration guide for implementing a production-ready Wazuh multi-node architecture using Docker containers in Microsoft Azure. 
 
-The solution implements mutual TLS (mTLS) communication using a private Public Key Infrastructure (PKI) consisting of a Root Certificate Authority (CA), an Intermediate CA, node certificates, certificate chains, and Certificate Revocation Lists (CRLs). Certificates are generated with appropriate server, client, or combined server/client roles based on each component's communication requirements. 
+The deployment is designed to provide high availability, scalability, secure communication, centralized security monitoring, and efficient log storage management across multiple Wazuh components. 
 
-Filebeat collects logs from source systems and forwards them securely to the Logstash nodes. Logstash processes and enriches incoming events before forwarding them through HAProxy. HAProxy provides load balancing, TLS termination and re-encryption, certificate validation, backend health checking, and high availability across the Wazuh Manager nodes. rsyslog receives the forwarded events over TLS and reliably delivers them to the local Wazuh Manager using persistent disk queues. 
+The architecture consists of multiple Wazuh Indexer nodes distributed across hot and warm storage tiers, a clustered Wazuh Manager deployment with one master node and multiple worker nodes, a Wazuh Dashboard for centralized monitoring and management, and supporting components for secure log ingestion and traffic distribution. 
 
-The document covers certificate generation and distribution, installation and configuration of each component, TLS and mTLS configuration, load balancing, backend health checks, persistent queue configuration, service management, and deployment across multiple nodes.
+All communication between Wazuh components is secured using TLS certificates generated from a common Certificate Authority (CA). Dedicated certificates are created and distributed to the Wazuh Indexer nodes, Wazuh Manager nodes, Filebeat, and Wazuh Dashboard to provide encrypted and authenticated communication between services. 
+
+The Wazuh Indexer cluster is configured with dedicated hot and warm nodes to support index lifecycle management and efficient storage utilization. Newly created security indices are initially stored on hot nodes for active ingestion and search operations and are later migrated to warm nodes according to configured Index State Management (ISM) policies. 
+
+The deployment also integrates Azure Blob Storage with the Wazuh Indexer cluster using the Azure repository plugin. This integration enables index snapshots to be stored externally for backup, long-term retention, and disaster recovery purposes. 
+
+The Wazuh Manager cluster provides centralized event analysis, agent management, rule processing, and security alert generation. The clustered architecture improves scalability and availability by distributing workloads between the master and worker nodes. 
+
+The Wazuh Dashboard provides a centralized web interface for security monitoring, alert investigation, index management, and administration of the Wazuh environment. 
+
+This runbook covers certificate generation and distribution, Wazuh Indexer cluster deployment, Wazuh Manager cluster deployment, Wazuh Dashboard deployment, Docker configuration, TLS configuration, Azure Blob Storage integration, index lifecycle management, snapshot configuration, and validation of the deployed environment. 
+
+The objective of this document is to provide a repeatable deployment procedure that can be used by DevOps, SOC, and infrastructure teams to deploy, operate, troubleshoot, and maintain a secure and scalable Wazuh multi-node environment.
 
 ## Architecture diagram
-![Architecture diagram](<../../../assets/images/POC's/Vineeth/Secure Ingestion Pipeline Deployment/Architecture diagram.png>)
+![Multi node](<../../../assets/images/POC's/Vineeth\Wazuh Multi Node Runbook\Multi node.png>)
+
 
 ## 1. certificate generation guide
 This guide helps you to understand the overview of certificate creation and deployment.
@@ -3503,6 +3516,7 @@ DASHBOARD_PASSWORD=your_kibana_passowrd
 root_ca_pem=./certs/root-ca.pem
 wazuh_dashboard_pem=./certs/wazuh.dashboard.pem
 wazuh_dashboard_key_pem=./certs/wazuh.dashboard-key.pem
+```
 
 Replace the following placeholders in the ossec.conf file with your own values:
 - replace `indexer1_IP_address`, `indexer2_IP_address`, `indexer3_IP_address`, `indexer4_IP_address` and `indexer5_IP_address` with the IP addresses of your Wazuh indexer nodes.
@@ -3514,7 +3528,7 @@ Once you have created the docker-compose.yml, ossec.conf, and .env files for Waz
 ```
 docker-compose up -d
 ```
-Check the logs to ensure that the Wazuh worker2 container is running correctly:
+Check the logs to ensure that the Wazuh dashboard container is running correctly:
 ```
 docker-compose logs -f wazuh.dhashboard
 ```
