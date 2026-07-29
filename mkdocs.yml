@@ -38,21 +38,48 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started: 01-Getting_started/Getting_started.md
-  - Deployment & Configuration:
-      - Index Template & Filebeat: 02-index-template-filebeat/index_template.md
+
+  - 1. Architecture & Deployment:
+      - Getting Started: 01-Getting_started/Getting_started.md
+      - Index Templates & Filebeat: 02-index-template-filebeat/index_template.md
+      - Wazuh Multi-Node Runbook: POC's/Vineeth/Wazuh Multi Node Runbook/Wazuh Multi Node Runbook.md
+
+  - 2. Secure Ingestion & Pipelines:
+      - High Availability Log Ingestion: POC's/Vineeth/High Availability Log Ingestion Pipeline Deployment Guide/High Availability Log Ingestion Pipeline Deployment Guide.md
+
+  - 3. Endpoint & Group Management:
       - Agent Deployment: 03-agent-deployment/agent_deplyment.md
       - Agent Configuration: 04-agent-configuration/agent_config.md
-  - Security & Access:
-      - RBAC: 06-rbac/rbac.md
-      - Document Level Security (DLS): 07-dls/dls.md
-      - SSO - Microsoft Entra ID: 08-sso-entra/sso.md
-  - Reference:
-      - Cluster and Index Verification: 09-Cluster and Index Verification/Cluster and Index Verification.md
-      - Reference: 10-reference/reference.md
-      - Wazuh Multi Node Runbook: POC's/Vineeth/Wazuh Multi Node Runbook/Wazuh Multi Node Runbook.md
-      - High Availability Log Ingestion Pipeline Deployment Guide: POC's/Vineeth/High Availability Log Ingestion Pipeline Deployment Guide/High Availability Log Ingestion Pipeline Deployment Guide.md
       - Zero Downtime Group Configuration: POC's/Junaid/POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA/POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA.md
-      - Single Agent Multi Group in Wazuh: POC's/Junaid/POC- Single Agent Multi-Group in Wazuh/POC- Single Agent Multi-Group in Wazuh.md
-      - Operating System Based Group Creation in Wazuh GitHub: POC's/Junaid/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub.md
+      - Multi-Group Agent Assignment: POC's/Junaid/POC- Single Agent Multi-Group in Wazuh/POC- Single Agent Multi-Group in Wazuh.md
+      - OS-Based Dynamic Grouping: POC's/Junaid/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub.md
+
+  - 4. Access Control & Identity:
+      - Role-Based Access Control (RBAC): 06-rbac/rbac.md
+      - Document Level Security (DLS): 07-dls/dls.md
+      - SSO Integration (Microsoft Entra ID): 08-sso-entra/sso.md
+
+  - 5. Operations & Verification:
+      - Cluster & Index Verification: 09-Cluster and Index Verification/Cluster and Index Verification.md
+      - Wazuh Reference Guide: 10-reference/reference.md
+
+# nav:
+#   - Home: index.md
+#   - Getting Started: 01-Getting_started/Getting_started.md
+#   - Deployment & Configuration:
+#       - Index Template & Filebeat: 02-index-template-filebeat/index_template.md
+#       - Agent Deployment: 03-agent-deployment/agent_deplyment.md
+#       - Agent Configuration: 04-agent-configuration/agent_config.md
+#   - Security & Access:
+#       - RBAC: 06-rbac/rbac.md
+#       - Document Level Security (DLS): 07-dls/dls.md
+#       - SSO - Microsoft Entra ID: 08-sso-entra/sso.md
+#   - Reference:
+#       - Cluster and Index Verification: 09-Cluster and Index Verification/Cluster and Index Verification.md
+#       - Reference: 10-reference/reference.md
+#       - Wazuh Multi Node Runbook: POC's/Vineeth/Wazuh Multi Node Runbook/Wazuh Multi Node Runbook.md
+#       - High Availability Log Ingestion Pipeline Deployment Guide: POC's/Vineeth/High Availability Log Ingestion Pipeline Deployment Guide/High Availability Log Ingestion Pipeline Deployment Guide.md
+#       - Zero Downtime Group Configuration: POC's/Junaid/POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA/POC_Zero_Downtime_Group_Configuration_Deployment_in_Wazuh_HA.md
+#       - Single Agent Multi Group in Wazuh: POC's/Junaid/POC- Single Agent Multi-Group in Wazuh/POC- Single Agent Multi-Group in Wazuh.md
+#       - Operating System Based Group Creation in Wazuh GitHub: POC's/Junaid/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub/POC-01_Operating_System_Based_Group_Creation_in_Wazuh_GitHub.md
   
