@@ -1,5 +1,6 @@
 site_name: Wazuh MSSP Multi-Tenant Implementation Guide
 site_description: Production implementation guide for multi-tenant Wazuh MSSP on single-node Docker
+dev_addr: localhost:8001
 
 theme:
   name: material
