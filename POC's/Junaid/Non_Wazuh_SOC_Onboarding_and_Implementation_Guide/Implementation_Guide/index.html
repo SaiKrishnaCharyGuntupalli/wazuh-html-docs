@@ -11,8 +11,6 @@
       
       
       
-        <link rel="prev" href="../../../../10-reference/reference/">
-      
       
       
         
@@ -23,7 +21,7 @@
     
     
       
-        <title>Non Wazuh SOC Onboarding & Implementation Guide - Wazuh MSSP Multi-Tenant Implementation Guide</title>
+        <title>Implementation Guide - Wazuh MSSP Multi-Tenant Implementation Guide</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#non-wazuh-soc-client-onboarding-pipeline-implementation-guide" class="md-skip">
+        <a href="#part-b-secure-webhook-ingestion-nginx-reverse-proxy-replacing-ngrok" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Non Wazuh SOC Onboarding & Implementation Guide
+              Implementation Guide
             
           </span>
         </div>
@@ -932,8 +930,6 @@
       
   
   
-    
-  
   
   
     
@@ -945,11 +941,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -959,7 +955,7 @@
   <span class="md-ellipsis">
     
   
-    6. Non Wazuh SOC Onboarding & Implementation
+    6. Non Wazuh SOC Onboarding
   
 
     
@@ -970,12 +966,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
-    6. Non Wazuh SOC Onboarding & Implementation
+    6. Non Wazuh SOC Onboarding
   
 
           </label>
@@ -985,44 +981,17 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Non Wazuh SOC Onboarding & Implementation Guide
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Non_Wazuh_SOC_Onboarding/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Non Wazuh SOC Onboarding & Implementation Guide
+    Non Wazuh SOC Onboarding
   
 
     
@@ -1031,403 +1000,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Table of Contents
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-executive-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Executive Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-scope-and-audience" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Scope and Audience
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-a-soc-client-onboarding-plan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part A — SOC Client Onboarding Plan
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part A — SOC Client Onboarding Plan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a1-purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.1 Purpose
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a2-pre-requisites-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2 Pre-Requisites Checklist
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A.2 Pre-Requisites Checklist">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a21-environment-and-data-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.1 Environment and Data Profile
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a22-platform-and-index-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.2 Platform and Index Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a23-platform-access-and-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.3 Platform Access and Security
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a24-integrations-tbd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.4 Integrations (TBD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a25-commercial-and-operational" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.5 Commercial and Operational
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a3-onboarding-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3 Onboarding Workflow
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A.3 Onboarding Workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a31-stage-1-tenant-registration-organization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3.1 Stage 1 — Tenant Registration / Organization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a32-stage-2-begin-platform-mssp-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3.2 Stage 2 — Begin Platform (MSSP) Setup
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a33-reference-pipeline-github-test-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3.3 Reference Pipeline — GitHub Test Repository
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a4-onboarding-sign-off-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.4 Onboarding Sign-off Checklist
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-b-secure-webhook-ingestion-nginx-reverse-proxy-replacing-ngrok" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part B — Secure Webhook Ingestion: Nginx Reverse Proxy (Replacing ngrok)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part B — Secure Webhook Ingestion: Nginx Reverse Proxy (Replacing ngrok)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#b1-objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B.1 Objective
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b2-prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B.2 Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b3-implementation-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B.3 Implementation Steps
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b4-final-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B.4 Final Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-c-opensearch-index-lifecycle-ism-rollover" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part C — OpenSearch Index Lifecycle: ISM Rollover
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part C — OpenSearch Index Lifecycle: ISM Rollover">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#c1-purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C.1 Purpose
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c2-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C.2 Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c3-implementation-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C.3 Implementation Steps
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c4-quick-reference-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C.4 Quick Reference Commands
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-d-consolidated-end-to-end-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part D — Consolidated End-to-End Architecture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#appendix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Appendix
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Appendix">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#appendix-1-glossary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Appendix 1 — Glossary
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#appendix-2-security-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Appendix 2 — Security Checklist
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#appendix-3-source-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Appendix 3 — Source Documents
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1457,208 +1029,12 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Table of Contents
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-executive-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Executive Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-scope-and-audience" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Scope and Audience
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-a-soc-client-onboarding-plan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part A — SOC Client Onboarding Plan
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part A — SOC Client Onboarding Plan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a1-purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.1 Purpose
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a2-pre-requisites-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2 Pre-Requisites Checklist
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A.2 Pre-Requisites Checklist">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a21-environment-and-data-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.1 Environment and Data Profile
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a22-platform-and-index-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.2 Platform and Index Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a23-platform-access-and-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.3 Platform Access and Security
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a24-integrations-tbd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.4 Integrations (TBD)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a25-commercial-and-operational" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.5 Commercial and Operational
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a3-onboarding-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3 Onboarding Workflow
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A.3 Onboarding Workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a31-stage-1-tenant-registration-organization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3.1 Stage 1 — Tenant Registration / Organization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a32-stage-2-begin-platform-mssp-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3.2 Stage 2 — Begin Platform (MSSP) Setup
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a33-reference-pipeline-github-test-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3.3 Reference Pipeline — GitHub Test Repository
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a4-onboarding-sign-off-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.4 Onboarding Sign-off Checklist
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#part-b-secure-webhook-ingestion-nginx-reverse-proxy-replacing-ngrok" class="md-nav__link">
@@ -1860,130 +1236,8 @@
 
 
 
-<h1 id="non-wazuh-soc-client-onboarding-pipeline-implementation-guide">Non-Wazuh SOC Client Onboarding &amp; Pipeline Implementation Guide</h1>
-<p><em>GitHub → Nginx → Logstash → OpenSearch (ityug-raw-logs)</em></p>
-<p>Consolidated reference covering client onboarding, secure webhook ingestion, and index lifecycle management.</p>
-<p>Prepared for internal SOC / MSSP operations use
-Version 1.0</p>
-<hr />
-<h2 id="table-of-contents">Table of Contents</h2>
-<ol>
-<li><a href="#1-executive-summary">Executive Summary</a></li>
-<li><a href="#2-scope-and-audience">Scope and Audience</a></li>
-<li><a href="#part-a--soc-client-onboarding-plan">Part A — SOC Client Onboarding Plan</a></li>
-<li><a href="#part-b--secure-webhook-ingestion-nginx-reverse-proxy-replacing-ngrok">Part B — Secure Webhook Ingestion: Nginx Reverse Proxy (Replacing ngrok)</a></li>
-<li><a href="#part-c--opensearch-index-lifecycle-ism-rollover">Part C — OpenSearch Index Lifecycle: ISM Rollover</a></li>
-<li><a href="#part-d--consolidated-end-to-end-architecture">Part D — Consolidated End-to-End Architecture</a></li>
-<li><a href="#appendix">Appendix</a></li>
-</ol>
-<hr />
-<h2 id="1-executive-summary">1. Executive Summary</h2>
-<p>This document consolidates three working artifacts produced during the setup of a non-Wazuh SOC client pipeline into a single, structured reference: (1) the client onboarding plan, (2) the Nginx reverse-proxy implementation that replaced a temporary ngrok tunnel for GitHub webhook delivery, and (3) the OpenSearch Index State Management (ISM) rollover configuration that keeps the resulting index (<code>ityug-raw-logs</code>) healthy over time.</p>
-<p>Together these three pieces describe one continuous data path: a client's source events (GitHub, GitLab, network telemetry, Kubernetes, etc.) are collected, forwarded securely over the public internet, parsed by Logstash, written into a rolling OpenSearch index, and evaluated by alert monitors — all wrapped in a repeatable onboarding process so the same pattern can be applied to future non-Wazuh clients.</p>
-<p>The goal of this guide is to give any engineer picking up the project a single source of truth: what information must be collected from a client before work starts, how the ingress layer is built and secured, and how the storage layer is configured to roll over and retain data without manual intervention.</p>
-<h2 id="2-scope-and-audience">2. Scope and Audience</h2>
-<p>This guide is intended for SOC engineers, MSSP platform administrators, and DevOps/backend engineers involved in onboarding a new client that does not use a native Wazuh agent. It assumes familiarity with Linux system administration, basic networking (DNS, TLS, reverse proxies), and the Elastic/OpenSearch ecosystem (Logstash, indices, aliases, ISM).</p>
-<ul>
-<li><strong>Part A</strong> defines the business and technical information that must be gathered from the client and the steps to provision their tenant.</li>
-<li><strong>Part B</strong> is a step-by-step implementation of the secure webhook ingress (Nginx reverse proxy + Let's Encrypt TLS), replacing the ngrok tunnel used during initial testing.</li>
-<li><strong>Part C</strong> is a step-by-step implementation of automatic index rollover using OpenSearch ISM, so a single alias always points at the current write index.</li>
-<li><strong>Part D</strong> ties the three parts together into one end-to-end architecture diagram.</li>
-<li>The <strong>Appendix</strong> provides a glossary, a security checklist, and a consolidated command reference.</li>
-</ul>
-<hr />
-<h2 id="part-a-soc-client-onboarding-plan">Part A — SOC Client Onboarding Plan</h2>
-<h3 id="a1-purpose">A.1 Purpose</h3>
-<p>Define a standardized onboarding process for clients that will be monitored without a native Wazuh agent, including how the appropriate ingestion pipeline is chosen for each client based on their environment and monitoring requirements.</p>
-<blockquote>
-<p><strong>Note:</strong> The pilot rollout referenced in Parts B and C uses a GitHub test repository as the source. The original planning notes referenced GitLab as the "current selection" — confirm with the client which source system(s) are in scope before repeating this process for a new tenant, since the pipeline choice (Part B/C) depends on it.</p>
-</blockquote>
-<h3 id="a2-pre-requisites-checklist">A.2 Pre-Requisites Checklist</h3>
-<p>Collect the following information from the client before provisioning begins. Items marked <strong>TBD</strong> are still being standardized internally and should be confirmed with the CISO / platform owner at the time of onboarding.</p>
-<h4 id="a21-environment-and-data-profile">A.2.1 Environment and Data Profile</h4>
-<ul>
-<li>Number of endpoints to be monitored</li>
-<li>Type of endpoints — e.g. GitLab, GitHub, network telemetry (NetFlow, Suricata, Zeek, etc.), Kubernetes, and other log sources</li>
-<li>Expected data volume (e.g. 30 GB/day or more)</li>
-<li>Networking requirements for log forwarding from the endpoint to the Logstash server — confirm required ports and protocols are reachable</li>
-<li>Subscription / licensing limits (<strong>TBD</strong>)</li>
-</ul>
-<h4 id="a22-platform-and-index-configuration">A.2.2 Platform and Index Configuration</h4>
-<ul>
-<li>Wazuh Indexer indices to be created</li>
-<li>Index rollover strategy (see Part C)</li>
-<li>ISM policy — thresholds to be agreed with the customer</li>
-<li>RBAC roles — default or custom</li>
-<li>Dashboards required</li>
-<li>Wazuh / Logstash routing preference</li>
-<li>Monitor logic, triggers, and actions — defined per client requirement</li>
-<li>Retention policy — standard (CISO-defined) or custom per client</li>
-<li>Tenant name</li>
-<li>Agent ID — default sequence unless the client requires otherwise</li>
-<li>Region</li>
-<li>Compliance requirements (e.g. data residency, industry regulations)</li>
-<li>Backup strategy</li>
-</ul>
-<h4 id="a23-platform-access-and-security">A.2.3 Platform Access and Security</h4>
-<ul>
-<li>Dedicated SOC platform vs. shared/multi-tenant platform</li>
-<li>If shared: communicate platform guidelines and limitations, including the isolation scope between tenants</li>
-<li>Confirm whether SSO is required for platform access</li>
-<li>If SSO is requested, provide RBAC role mapping details</li>
-<li>Access privileges for each RBAC role</li>
-<li>Collect user/member details required to provision platform access</li>
-<li>Per-user role assignment</li>
-</ul>
-<h4 id="a24-integrations-tbd">A.2.4 Integrations (TBD)</h4>
-<ul>
-<li>SIEM integration</li>
-<li>SOAR integration</li>
-<li>Ticketing system integration</li>
-</ul>
-<h4 id="a25-commercial-and-operational">A.2.5 Commercial and Operational</h4>
-<ul>
-<li>Point of contact / contact details</li>
-<li>Agreement start date and total agreement period / tenure</li>
-<li>Alert reporting style (webhook)</li>
-<li>Report selection — on-demand or frequency-based</li>
-<li>Onboarding confirmation and access handover</li>
-<li>Maintenance and support model (<strong>TBD</strong>)</li>
-</ul>
-<h3 id="a3-onboarding-workflow">A.3 Onboarding Workflow</h3>
-<p>Once the pre-requisites above have been collected, onboarding proceeds in two stages: tenant registration, followed by platform (MSSP) setup.</p>
-<h4 id="a31-stage-1-tenant-registration-organization">A.3.1 Stage 1 — Tenant Registration / Organization</h4>
-<ol>
-<li>Application: register the tenant with all details collected during the pre-requisites phase.</li>
-<li>Enroll the new tenant using the information gathered from the client.</li>
-<li>Prepare a backend engineering checklist, or raise a ticket, capturing the tenant's configuration.</li>
-<li>Send the setup request / ticket to the backend engineering team.</li>
-</ol>
-<h4 id="a32-stage-2-begin-platform-mssp-setup">A.3.2 Stage 2 — Begin Platform (MSSP) Setup</h4>
-<ol>
-<li>Template creation.</li>
-<li>Tenant-specific index creation.</li>
-<li>Update Filebeat/Logstash configuration to accommodate alert routing for the new tenant.</li>
-<li>Deploy the endpoint/agent, or configure agentless collection where no agent is used.</li>
-<li>Verify connectivity from the source to the ingestion layer.</li>
-<li>Confirm agent/source health.</li>
-<li>Configure RBAC.</li>
-<li>Create index patterns.</li>
-<li>Run platform validation checks before handover.</li>
-</ol>
-<h4 id="a33-reference-pipeline-github-test-repository">A.3.3 Reference Pipeline — GitHub Test Repository</h4>
-<p>The current pilot pipeline collects regular/default Git repository events (pushes, webhook deliveries) and converts them into alerts. It is used as the reference implementation for Parts B and C of this guide, and as the template for onboarding future clients with a similar source profile.</p>
-<h3 id="a4-onboarding-sign-off-checklist">A.4 Onboarding Sign-off Checklist</h3>
-<p>Before handing the tenant over to steady-state operations, confirm the following:</p>
-<ul>
-<li>[ ] All pre-requisite information in A.2 has been collected and recorded against the tenant record</li>
-<li>[ ] Ingestion pipeline (Part B) is deployed, TLS-secured, and verified end to end</li>
-<li>[ ] Index and rollover policy (Part C) are created and verified</li>
-<li>[ ] RBAC roles and (if applicable) SSO are configured and tested with a sample user</li>
-<li>[ ] Dashboards and index patterns are visible to the client's assigned users</li>
-<li>[ ] Retention and backup policy is documented and agreed with the client</li>
-<li>[ ] Point of contact, escalation path, and support/maintenance model are documented</li>
-<li>[ ] Client has received access credentials and onboarding confirmation</li>
-</ul>
-<hr />
+  <h1>Implementation Guide</h1>
+
 <h2 id="part-b-secure-webhook-ingestion-nginx-reverse-proxy-replacing-ngrok">Part B — Secure Webhook Ingestion: Nginx Reverse Proxy (Replacing ngrok)</h2>
 <h3 id="b1-objective">B.1 Objective</h3>
 <p>During initial testing, GitHub webhook events reached Logstash through an ngrok tunnel. ngrok is convenient for prototyping but is not suitable for production: the public URL is not permanent, traffic passes through a third-party relay, and there is no control over TLS certificate management. This section replaces that tunnel with a permanent, self-hosted Nginx reverse proxy fronted by a real domain name and a Let's Encrypt TLS certificate.</p>
