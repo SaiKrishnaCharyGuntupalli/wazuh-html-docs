@@ -11,10 +11,8 @@
       
       
       
-        <link rel="prev" href="../../../../10-reference/reference/">
+        <link rel="prev" href="../../Non_Wazuh_SOC_Onboarding_and_Implementation_Guide/Non_Wazuh_SOC_Onboarding/">
       
-      
-        <link rel="next" href="../../SOC_Client_Onboarding_Extension_Plan/SOC_Client_Onboarding_Extension_Plan/">
       
       
         
@@ -25,7 +23,7 @@
     
     
       
-        <title>Non Wazuh SOC Onboarding - Wazuh MSSP Multi-Tenant Implementation Guide</title>
+        <title>SOC Client Onboarding - Wazuh MSSP Multi-Tenant Implementation Guide</title>
       
     
     
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#non-wazuh-soc-client-onboarding-pipeline-implementation-guide" class="md-skip">
+        <a href="#soc-client-onboarding-plan" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Non Wazuh SOC Onboarding
+              SOC Client Onboarding
             
           </span>
         </div>
@@ -989,6 +987,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Non_Wazuh_SOC_Onboarding_and_Implementation_Guide/Non_Wazuh_SOC_Onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non Wazuh SOC Onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1008,7 +1034,7 @@
   <span class="md-ellipsis">
     
   
-    Non Wazuh SOC Onboarding
+    SOC Client Onboarding
   
 
     
@@ -1026,7 +1052,7 @@
   <span class="md-ellipsis">
     
   
-    Non Wazuh SOC Onboarding
+    SOC Client Onboarding
   
 
     
@@ -1052,10 +1078,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Table of Contents
+        PURPOSE
       
     </span>
   </a>
@@ -1063,44 +1089,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-executive-summary" class="md-nav__link">
+  <a href="#real-customer-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Executive Summary
+        REAL CUSTOMER SERVICES
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-scope-and-audience" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Scope and Audience
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-a-soc-client-onboarding-plan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part A — SOC Client Onboarding Plan
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part A — SOC Client Onboarding Plan">
+    <nav class="md-nav" aria-label="REAL CUSTOMER SERVICES">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a1-purpose" class="md-nav__link">
+  <a href="#1-pre-requisite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.1 Purpose
+        1. Pre-requisite
       
     </span>
   </a>
@@ -1108,22 +1112,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a2-pre-requisites-checklist" class="md-nav__link">
+  <a href="#2-tenant-registrationorganization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2 Pre-Requisites Checklist
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A.2 Pre-Requisites Checklist">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a21-environment-and-data-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.1 Environment and Data Profile
+        2. Tenant Registration/Organization
       
     </span>
   </a>
@@ -1131,10 +1123,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a22-platform-and-index-configuration" class="md-nav__link">
+  <a href="#3-begin-platform-mssp-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2.2 Platform and Index Configuration
+        3. Begin Platform (MSSP) Setup
       
     </span>
   </a>
@@ -1142,10 +1134,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a23-platform-access-and-security" class="md-nav__link">
+  <a href="#4-rbac-permission-user-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2.3 Platform Access and Security
+        4. RBAC Permission &amp; User Matrix
       
     </span>
   </a>
@@ -1153,10 +1145,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a24-integrations-tbd" class="md-nav__link">
+  <a href="#5-resource-ownership-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2.4 Integrations (TBD)
+        5. Resource Ownership &amp; Mapping
       
     </span>
   </a>
@@ -1164,10 +1156,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a25-commercial-and-operational" class="md-nav__link">
+  <a href="#6-rules-decoders-cdb-lists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2.5 Commercial and Operational
+        6. Rules, Decoders &amp; CDB Lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-agent-level-access-group-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Agent-Level Access &amp; Group Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-index-dashboard-tenant-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Index, Dashboard &amp; Tenant Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-rbac-isolation-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. RBAC &amp; Isolation Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-wazuh-grouping-benefits-in-client-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Wazuh Grouping Benefits in Client Onboarding
       
     </span>
   </a>
@@ -1178,70 +1214,37 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a3-onboarding-workflow" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#1-standardized-soc-client-onboarding-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.3 Onboarding Workflow
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A.3 Onboarding Workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a31-stage-1-tenant-registration-organization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3.1 Stage 1 — Tenant Registration / Organization
+        1. STANDARDIZED SOC CLIENT ONBOARDING PROCESS
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a32-stage-2-begin-platform-mssp-setup" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-onboarding-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.3.2 Stage 2 — Begin Platform (MSSP) Setup
+        2. ONBOARDING CHECKLIST
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a33-reference-pipeline-github-test-repository" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-grouping-assessment-and-recommendations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.3.3 Reference Pipeline — GitHub Test Repository
+        3. GROUPING ASSESSMENT AND RECOMMENDATIONS
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a4-onboarding-sign-off-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.4 Onboarding Sign-off Checklist
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1249,34 +1252,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../SOC_Client_Onboarding_Extension_Plan/SOC_Client_Onboarding_Extension_Plan/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SOC Client Onboarding
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1316,10 +1291,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Table of Contents
+        PURPOSE
       
     </span>
   </a>
@@ -1327,44 +1302,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-executive-summary" class="md-nav__link">
+  <a href="#real-customer-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Executive Summary
+        REAL CUSTOMER SERVICES
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-scope-and-audience" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Scope and Audience
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-a-soc-client-onboarding-plan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part A — SOC Client Onboarding Plan
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part A — SOC Client Onboarding Plan">
+    <nav class="md-nav" aria-label="REAL CUSTOMER SERVICES">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a1-purpose" class="md-nav__link">
+  <a href="#1-pre-requisite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.1 Purpose
+        1. Pre-requisite
       
     </span>
   </a>
@@ -1372,22 +1325,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a2-pre-requisites-checklist" class="md-nav__link">
+  <a href="#2-tenant-registrationorganization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2 Pre-Requisites Checklist
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A.2 Pre-Requisites Checklist">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a21-environment-and-data-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.2.1 Environment and Data Profile
+        2. Tenant Registration/Organization
       
     </span>
   </a>
@@ -1395,10 +1336,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a22-platform-and-index-configuration" class="md-nav__link">
+  <a href="#3-begin-platform-mssp-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2.2 Platform and Index Configuration
+        3. Begin Platform (MSSP) Setup
       
     </span>
   </a>
@@ -1406,10 +1347,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a23-platform-access-and-security" class="md-nav__link">
+  <a href="#4-rbac-permission-user-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2.3 Platform Access and Security
+        4. RBAC Permission &amp; User Matrix
       
     </span>
   </a>
@@ -1417,10 +1358,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a24-integrations-tbd" class="md-nav__link">
+  <a href="#5-resource-ownership-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2.4 Integrations (TBD)
+        5. Resource Ownership &amp; Mapping
       
     </span>
   </a>
@@ -1428,10 +1369,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a25-commercial-and-operational" class="md-nav__link">
+  <a href="#6-rules-decoders-cdb-lists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.2.5 Commercial and Operational
+        6. Rules, Decoders &amp; CDB Lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-agent-level-access-group-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Agent-Level Access &amp; Group Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-index-dashboard-tenant-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Index, Dashboard &amp; Tenant Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-rbac-isolation-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. RBAC &amp; Isolation Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-wazuh-grouping-benefits-in-client-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Wazuh Grouping Benefits in Client Onboarding
       
     </span>
   </a>
@@ -1442,70 +1427,37 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a3-onboarding-workflow" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#1-standardized-soc-client-onboarding-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.3 Onboarding Workflow
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="A.3 Onboarding Workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a31-stage-1-tenant-registration-organization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.3.1 Stage 1 — Tenant Registration / Organization
+        1. STANDARDIZED SOC CLIENT ONBOARDING PROCESS
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a32-stage-2-begin-platform-mssp-setup" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-onboarding-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.3.2 Stage 2 — Begin Platform (MSSP) Setup
+        2. ONBOARDING CHECKLIST
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a33-reference-pipeline-github-test-repository" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-grouping-assessment-and-recommendations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A.3.3 Reference Pipeline — GitHub Test Repository
+        3. GROUPING ASSESSMENT AND RECOMMENDATIONS
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a4-onboarding-sign-off-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A.4 Onboarding Sign-off Checklist
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1526,130 +1478,190 @@
 
 
 
-<h1 id="non-wazuh-soc-client-onboarding-pipeline-implementation-guide">Non-Wazuh SOC Client Onboarding &amp; Pipeline Implementation Guide</h1>
-<p><em>GitHub → Nginx → Logstash → OpenSearch (ityug-raw-logs)</em></p>
-<p>Consolidated reference covering client onboarding, secure webhook ingestion, and index lifecycle management.</p>
-<p>Prepared for internal SOC / MSSP operations use
-Version 1.0</p>
+<h1 id="soc-client-onboarding-plan">SOC CLIENT ONBOARDING PLAN</h1>
+<h2 id="purpose">PURPOSE</h2>
+<p>Define a standardized onboarding process for SOC client integrations and evaluate the value of grouping in the onboarding lifecycle.</p>
 <hr />
-<h2 id="table-of-contents">Table of Contents</h2>
-<ol>
-<li><a href="#1-executive-summary">Executive Summary</a></li>
-<li><a href="#2-scope-and-audience">Scope and Audience</a></li>
-<li><a href="#part-a--soc-client-onboarding-plan">Part A — SOC Client Onboarding Plan</a></li>
-</ol>
-<!-- 4. [Part B — Secure Webhook Ingestion: Nginx Reverse Proxy (Replacing ngrok)](#part-b--secure-webhook-ingestion-nginx-reverse-proxy-replacing-ngrok)
-5. [Part C — OpenSearch Index Lifecycle: ISM Rollover](#part-c--opensearch-index-lifecycle-ism-rollover)
-6. [Part D — Consolidated End-to-End Architecture](#part-d--consolidated-end-to-end-architecture)
-7. [Appendix](#appendix) -->
-
+<h2 id="real-customer-services">REAL CUSTOMER SERVICES</h2>
+<h3 id="1-pre-requisite">1. Pre-requisite</h3>
+<p>a. Number of endpoints</p>
+<p>b. Type of endpoints: Linux, Windows, Mac, Docker, VMs, Cloud logs: Azure logs, GCP logs, AWS, Database logs, Server, Application logs.</p>
+<p>c. Data volume expectations</p>
+<p>d. Networking requirement for accessing the endpoints (public with protected access/private)</p>
+<p>e. Subscription/Licensing limits (TBD)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;i. Wazuh Indexer Indices</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;ii. RBAC roles/default</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;iii. Dashboards</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;iv. Wazuh groups</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;v. wazuh/Logstash routes preference</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;vi. Decoders logics/Alert rules</p>
+<p>f. Retention policy: standard (defined by CISO/custom as per the client requirement)</p>
+<p>g. Tenant name</p>
+<p>h. Customer ID</p>
+<p>i. Region</p>
+<p>j. Compliance requirements</p>
+<p>k. Backup strategy</p>
+<p>l. Dedicated SOC platform/sharable SOC platform</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;i. Inform sharable platform guidelines/limitations</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;ii. In terms of complete isolation (share the isolation scope)</p>
+<p>m. Check SSO requirement for platform access</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;i. If SSO requested (provide RBACK role details)</p>
+<p>n. Access privileges for RBAC</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;i. Users/members data collection to access the platform</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;ii. User wise role assignments (role assignment)</p>
+<p>o. SIEM (TBD)</p>
+<p>p. SOAR (TBD)</p>
+<p>q. Ticketing system (TBD)</p>
+<p>r. Point of contact/Contact details</p>
+<p>s. Agreement of start date/ Total agreement period/Tenure</p>
+<p>t. Alert reporting style (Email or slack or platform)</p>
+<p>u. Report selection (On demand/frequency based)</p>
+<p>v. Onboarding confirmation/Access handover</p>
+<p>w. Maintenance/support (TBD)</p>
+<p><strong>Current selection: Windows</strong></p>
+<p>i. Regular/Default monitoring service applicable [OS level, security level, Terminal, etc]</p>
+<p>ii. Optional (On-Client request): Sysmon, External firewall, Active response, etc.</p>
+<h3 id="2-tenant-registrationorganization">2. Tenant Registration/Organization</h3>
+<p>a. Application: Tenant register with all the details collected above</p>
+<p>b. Enroll a new Tenant as per above information collected from the client</p>
+<p>c. Prepare backend engineering checklist or raise a ticket</p>
+<p>d. Send request/ticket to backend Engineering team to setup</p>
+<h3 id="3-begin-platform-mssp-setup">3. Begin Platform (MSSP) Setup</h3>
+<p>a. Template Creation</p>
+<p>b. Tenant specific Index creation</p>
+<p>c. Update Filebeat configuration to accommodate alerts routing</p>
+<p>d. Endpoint/Agent/Non-agent deployment</p>
+<p>e. Verify connectivity</p>
+<p>f. Confirm agent health</p>
+<p>g. RBAC</p>
+<p>h. Index patterns creation</p>
+<p>i. Platform validations</p>
+<h3 id="4-rbac-permission-user-matrix">4. RBAC Permission &amp; User Matrix</h3>
+<p>a. User/member details</p>
+<p>b. User-wise role assignment</p>
+<p>c. User/team-wise permitted actions</p>
+<p>d. User/team-wise resource access scope</p>
+<p>e. Permission approval/owner</p>
+<h3 id="5-resource-ownership-mapping">5. Resource Ownership &amp; Mapping</h3>
+<p>a. Tenant-to-resource mapping</p>
+<p>b. Team-to-resource mapping</p>
+<p>c. Resource ownership for agents, rules, decoders, and lists</p>
+<p>d. Cross-tenant resource isolation requirements</p>
+<h3 id="6-rules-decoders-cdb-lists">6. Rules, Decoders &amp; CDB Lists</h3>
+<p>a. Custom rule file names and ownership</p>
+<p>b. Custom decoder file names and ownership</p>
+<p>c. CDB list names and ownership</p>
+<p>d. Read/write/modify permissions for each resource</p>
+<p>e. Resource-level access requirements</p>
+<h3 id="7-agent-level-access-group-mapping">7. Agent-Level Access &amp; Group Mapping</h3>
+<p>a. Agent ID and hostname mapping</p>
+<p>b. Agent-to-tenant mapping</p>
+<p>c. Agent-to-group mapping</p>
+<p>d. Individual agent access requirements</p>
+<p>e. Agent group-level access requirements</p>
+<p>f. Multiple-group membership requirements</p>
+<h3 id="8-index-dashboard-tenant-isolation">8. Index, Dashboard &amp; Tenant Isolation</h3>
+<p>a. Tenant-specific index requirements</p>
+<p>b. Index pattern mapping</p>
+<p>c. Dashboard access mapping</p>
+<p>d. Cross-tenant index/data visibility restrictions</p>
+<p>e. Define complete isolation scope for shared SOC platform</p>
+<h3 id="9-rbac-isolation-validation">9. RBAC &amp; Isolation Validation</h3>
+<p>a. Low-privilege test account</p>
+<p>b. Allowed-access validation</p>
+<p>c. Denied-access validation</p>
+<p>d. Cross-tenant access validation</p>
+<p>e. Rule/decoder/list access validation</p>
+<p>f. Agent/group access validation</p>
+<p>g. Final RBAC approval and access handover</p>
+<h3 id="10-wazuh-grouping-benefits-in-client-onboarding">10. Wazuh Grouping Benefits in Client Onboarding</h3>
+<p>a. Centralized agent configuration management.</p>
+<p>b. Bulk deployment of agent.conf to multiple endpoints</p>
+<p>c. Faster onboarding of new agents.</p>
+<p>d. Grouping by operating system, environment, and application.</p>
+<p>e. Simplified configuration updates and maintenance.</p>
+<p>f. Supports multiple group membership for a single agent.</p>
 <hr />
-<h2 id="1-executive-summary">1. Executive Summary</h2>
-<p>This document consolidates three working artifacts produced during the setup of a non-Wazuh SOC client pipeline into a single, structured reference: (1) the client onboarding plan, (2) the Nginx reverse-proxy implementation that replaced a temporary ngrok tunnel for GitHub webhook delivery, and (3) the OpenSearch Index State Management (ISM) rollover configuration that keeps the resulting index (<code>ityug-raw-logs</code>) healthy over time.</p>
-<p>Together these three pieces describe one continuous data path: a client's source events (GitHub, GitLab, network telemetry, Kubernetes, etc.) are collected, forwarded securely over the public internet, parsed by Logstash, written into a rolling OpenSearch index, and evaluated by alert monitors — all wrapped in a repeatable onboarding process so the same pattern can be applied to future non-Wazuh clients.</p>
-<p>The goal of this guide is to give any engineer picking up the project a single source of truth: what information must be collected from a client before work starts, how the ingress layer is built and secured, and how the storage layer is configured to roll over and retain data without manual intervention.</p>
-<h2 id="2-scope-and-audience">2. Scope and Audience</h2>
-<p>This guide is intended for SOC engineers, MSSP platform administrators, and DevOps/backend engineers involved in onboarding a new client that does not use a native Wazuh agent. It assumes familiarity with Linux system administration, basic networking (DNS, TLS, reverse proxies), and the Elastic/OpenSearch ecosystem (Logstash, indices, aliases, ISM).</p>
-<ul>
-<li><strong>Part A</strong> defines the business and technical information that must be gathered from the client and the steps to provision their tenant.</li>
-<li><strong>Part B</strong> is a step-by-step implementation of the secure webhook ingress (Nginx reverse proxy + Let's Encrypt TLS), replacing the ngrok tunnel used during initial testing.</li>
-<li><strong>Part C</strong> is a step-by-step implementation of automatic index rollover using OpenSearch ISM, so a single alias always points at the current write index.</li>
-<li><strong>Part D</strong> ties the three parts together into one end-to-end architecture diagram.</li>
-<li>The <strong>Appendix</strong> provides a glossary, a security checklist, and a consolidated command reference.</li>
-</ul>
+<h2 id="1-standardized-soc-client-onboarding-process">1. STANDARDIZED SOC CLIENT ONBOARDING PROCESS</h2>
+<p><strong>A. Agent Enrollment:</strong> Validate client requirements, onboard endpoints, verify connectivity, confirm agent health.</p>
+<p><strong>B. Template Creation:</strong> Create standard log templates, naming conventions, field mappings, parsing rules.</p>
+<p><strong>C. Index Creation:</strong> Create Elasticsearch/Kibana indexes, retention policies, lifecycle management and validation.</p>
+<p><strong>D. Filebeat Changes at Manager Level:</strong> Configure Filebeat centrally, update modules, validate forwarding and monitoring.</p>
+<p><strong>E. RBAC:</strong> Define SOC analyst, engineer and admin roles; implement least-privilege access and approval workflow.</p>
 <hr />
-<h2 id="part-a-soc-client-onboarding-plan">Part A — SOC Client Onboarding Plan</h2>
-<h3 id="a1-purpose">A.1 Purpose</h3>
-<p>Define a standardized onboarding process for clients that will be monitored without a native Wazuh agent, including how the appropriate ingestion pipeline is chosen for each client based on their environment and monitoring requirements.</p>
-<blockquote>
-<p><strong>Note:</strong> The pilot rollout referenced in Parts B and C uses a GitHub test repository as the source. The original planning notes referenced GitLab as the "current selection" — confirm with the client which source system(s) are in scope before repeating this process for a new tenant, since the pipeline choice (Part B/C) depends on it.</p>
-</blockquote>
-<h3 id="a2-pre-requisites-checklist">A.2 Pre-Requisites Checklist</h3>
-<p>Collect the following information from the client before provisioning begins. Items marked <strong>TBD</strong> are still being standardized internally and should be confirmed with the CISO / platform owner at the time of onboarding.</p>
-<h4 id="a21-environment-and-data-profile">A.2.1 Environment and Data Profile</h4>
+<h2 id="2-onboarding-checklist">2. ONBOARDING CHECKLIST</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Activity</th>
+<th>Owner</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requirement Review</td>
+<td>Collect client scope and log sources</td>
+<td>SOC/PM</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Agent Enrollment</td>
+<td>Deploy and validate agents</td>
+<td>Engineering</td>
+<td></td>
+</tr>
+<tr>
+<td>Template Creation</td>
+<td>Create log templates</td>
+<td>Engineering</td>
+<td></td>
+</tr>
+<tr>
+<td>Index Creation</td>
+<td>Configure indexes</td>
+<td>Platform Team</td>
+<td></td>
+</tr>
+<tr>
+<td>Filebeat Changes</td>
+<td>Manager-level updates</td>
+<td>Platform Team</td>
+<td></td>
+</tr>
+<tr>
+<td>RBAC Setup</td>
+<td>Role provisioning</td>
+<td>Security Admin</td>
+<td></td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>End-to-end testing</td>
+<td>SOC Team</td>
+<td></td>
+</tr>
+<tr>
+<td>Go-Live</td>
+<td>Production sign-off</td>
+<td>Customer &amp; SOC</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-grouping-assessment-and-recommendations">3. GROUPING ASSESSMENT AND RECOMMENDATIONS</h2>
+<p>Potential benefits of implementing grouping:</p>
 <ul>
-<li>Number of endpoints to be monitored</li>
-<li>Type of endpoints — e.g. GitLab, GitHub, network telemetry (NetFlow, Suricata, Zeek, etc.), Kubernetes, and other log sources</li>
-<li>Expected data volume (e.g. 30 GB/day or more)</li>
-<li>Networking requirements for log forwarding from the endpoint to the Logstash server — confirm required ports and protocols are reachable</li>
-<li>Subscription / licensing limits (<strong>TBD</strong>)</li>
+<li>Standardized onboarding packages for similar clients.</li>
+<li>Reduced manual configuration effort through reusable templates.</li>
+<li>Easier RBAC management by applying permissions to groups rather than individuals.</li>
+<li>Simplified Filebeat and agent deployment management.</li>
+<li>Improved scalability and auditability.</li>
 </ul>
-<h4 id="a22-platform-and-index-configuration">A.2.2 Platform and Index Configuration</h4>
-<ul>
-<li>Wazuh Indexer indices to be created</li>
-<li>Index rollover strategy (see Part C)</li>
-<li>ISM policy — thresholds to be agreed with the customer</li>
-<li>RBAC roles — default or custom</li>
-<li>Dashboards required</li>
-<li>Wazuh / Logstash routing preference</li>
-<li>Monitor logic, triggers, and actions — defined per client requirement</li>
-<li>Retention policy — standard (CISO-defined) or custom per client</li>
-<li>Tenant name</li>
-<li>Agent ID — default sequence unless the client requires otherwise</li>
-<li>Region</li>
-<li>Compliance requirements (e.g. data residency, industry regulations)</li>
-<li>Backup strategy</li>
-</ul>
-<h4 id="a23-platform-access-and-security">A.2.3 Platform Access and Security</h4>
-<ul>
-<li>Dedicated SOC platform vs. shared/multi-tenant platform</li>
-<li>If shared: communicate platform guidelines and limitations, including the isolation scope between tenants</li>
-<li>Confirm whether SSO is required for platform access</li>
-<li>If SSO is requested, provide RBAC role mapping details</li>
-<li>Access privileges for each RBAC role</li>
-<li>Collect user/member details required to provision platform access</li>
-<li>Per-user role assignment</li>
-</ul>
-<h4 id="a24-integrations-tbd">A.2.4 Integrations (TBD)</h4>
-<ul>
-<li>SIEM integration</li>
-<li>SOAR integration</li>
-<li>Ticketing system integration</li>
-</ul>
-<h4 id="a25-commercial-and-operational">A.2.5 Commercial and Operational</h4>
-<ul>
-<li>Point of contact / contact details</li>
-<li>Agreement start date and total agreement period / tenure</li>
-<li>Alert reporting style (webhook)</li>
-<li>Report selection — on-demand or frequency-based</li>
-<li>Onboarding confirmation and access handover</li>
-<li>Maintenance and support model (<strong>TBD</strong>)</li>
-</ul>
-<h3 id="a3-onboarding-workflow">A.3 Onboarding Workflow</h3>
-<p>Once the pre-requisites above have been collected, onboarding proceeds in two stages: tenant registration, followed by platform (MSSP) setup.</p>
-<h4 id="a31-stage-1-tenant-registration-organization">A.3.1 Stage 1 — Tenant Registration / Organization</h4>
-<ol>
-<li>Application: register the tenant with all details collected during the pre-requisites phase.</li>
-<li>Enroll the new tenant using the information gathered from the client.</li>
-<li>Prepare a backend engineering checklist, or raise a ticket, capturing the tenant's configuration.</li>
-<li>Send the setup request / ticket to the backend engineering team.</li>
-</ol>
-<h4 id="a32-stage-2-begin-platform-mssp-setup">A.3.2 Stage 2 — Begin Platform (MSSP) Setup</h4>
-<ol>
-<li>Template creation.</li>
-<li>Tenant-specific index creation.</li>
-<li>Update Filebeat/Logstash configuration to accommodate alert routing for the new tenant.</li>
-<li>Deploy the endpoint/agent, or configure agentless collection where no agent is used.</li>
-<li>Verify connectivity from the source to the ingestion layer.</li>
-<li>Confirm agent/source health.</li>
-<li>Configure RBAC.</li>
-<li>Create index patterns.</li>
-<li>Run platform validation checks before handover.</li>
-</ol>
-<h4 id="a33-reference-pipeline-github-test-repository">A.3.3 Reference Pipeline — GitHub Test Repository</h4>
-<p>The current pilot pipeline collects regular/default Git repository events (pushes, webhook deliveries) and converts them into alerts. It is used as the reference implementation for Parts B and C of this guide, and as the template for onboarding future clients with a similar source profile.</p>
-<h3 id="a4-onboarding-sign-off-checklist">A.4 Onboarding Sign-off Checklist</h3>
-<p>Before handing the tenant over to steady-state operations, confirm the following:</p>
-<ul>
-<li>[ ] All pre-requisite information in A.2 has been collected and recorded against the tenant record</li>
-<li>[ ] Ingestion pipeline (Part B) is deployed, TLS-secured, and verified end to end</li>
-<li>[ ] Index and rollover policy (Part C) are created and verified</li>
-<li>[ ] RBAC roles and (if applicable) SSO are configured and tested with a sample user</li>
-<li>[ ] Dashboards and index patterns are visible to the client's assigned users</li>
-<li>[ ] Retention and backup policy is documented and agreed with the client</li>
-<li>[ ] Point of contact, escalation path, and support/maintenance model are documented</li>
-<li>[ ] Client has received access credentials and onboarding confirmation</li>
-</ul>
+<p><strong>Recommendation:</strong> Implement grouping for clients with similar log sources, compliance requirements, and onboarding patterns. This can reduce deployment effort, improve consistency, and accelerate onboarding time while maintaining governance.</p>
+<hr />
 
 
 
