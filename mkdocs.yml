@@ -64,8 +64,9 @@ nav:
       - Cluster & Index Verification: 09-Cluster and Index Verification/Cluster and Index Verification.md
       - Wazuh Reference Guide: 10-reference/reference.md
 
-  - 6. Non Wazuh SOC Onboarding:
+  - 6. Client Onboarding:
       - Non Wazuh SOC Onboarding: POC's/Junaid/Non_Wazuh_SOC_Onboarding_and_Implementation_Guide/Non_Wazuh_SOC_Onboarding.md
+      - SOC Client Onboarding: POC's/Junaid/SOC_Client_Onboarding_Extension_Plan/SOC_Client_Onboarding_Extension_Plan.md
 
 # nav:
 #   - Home: index.md
